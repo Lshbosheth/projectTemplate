@@ -3,12 +3,18 @@
 </template>
 
 <script>
+import { demo } from '@/api/demo'
 export default {
   data() {
     return {
       routePath: ' ',
       originPath: ' 123'
     }
+  },
+  created() {
+    demo.getList().then(res => {
+      console.log(res)
+    })
   }
 }
 </script>

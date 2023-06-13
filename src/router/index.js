@@ -14,7 +14,7 @@ const routes = [
 ]
 
 export const router = new VueRouter({
-  base: 'projectTemplate',
+  base: process.env.NODE_ENV === 'production' ? '/projectTemplate/' : '.',
   mode: 'history',
   routes
 })

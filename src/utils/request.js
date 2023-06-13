@@ -28,7 +28,7 @@ services.interceptors.response.use(
       return Promise.reject(msg)
     }
 
-    return res
+    return res.data
   },
   error => {
     const { response } = error
